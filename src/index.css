@@ -1,0 +1,13 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: "EduHand";
+        font-style:normal;
+        font-weight:600;
+        src: url("/fonts/EduHand.ttf") format('truetype')
+    }
+}
