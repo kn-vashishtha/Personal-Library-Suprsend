@@ -6,8 +6,14 @@ import AddBook from "./components/AddBook";
 import EditBook from "./components/EditBook";
 import NotFound from "./components/NotFound";
 import Borrowed from "./components/Borrowed";
+import SuprSendInbox from '@suprsend/react-inbox';
+import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
+  const workspaceKey = process.env.SUPRSEND_WORKSPACE_KEY;
+  const subscriberId = 'kn.vashishtha22@gmail.com'; // Use the actual subscriber id
+  const distinctId = 'kn.vashishtha22@gmail.com'; // Use the actual distinct id
+
   return (
     <Router>
       <div className="flex min-h-screen flex-col bg-background text-text">
@@ -27,6 +33,11 @@ const App = () => {
             <Route path="/borrowed" element={<Borrowed />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <SuprSendInbox
+            workspaceKey={workspaceKey}
+            subscriberId={subscriberId}
+            distinctId={distinctId}
+          />
         </main>
         <footer className="mt-4 bg-primary p-4 text-center">
           <p className="text-sm text-secondary md:text-base">
