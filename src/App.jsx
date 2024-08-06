@@ -11,6 +11,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const workspaceKey = import.meta.env.VITE_SUPRSEND_WORKSPACE_KEY;
+  console.log("Workspace Key:", workspaceKey);
   const subscriberId = 'kn.vashishtha22@gmail.com'; // Use the actual subscriber id
   const distinctId = 'kn.vashishtha22@gmail.com'; // Use the actual distinct id
 
