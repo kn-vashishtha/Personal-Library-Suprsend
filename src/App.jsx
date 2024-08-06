@@ -10,7 +10,7 @@ import SuprSendInbox from '@suprsend/react-inbox';
 import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
-  const workspaceKey = process.env.SUPRSEND_WORKSPACE_KEY;
+  const workspaceKey = import.meta.env.VITE_SUPRSEND_WORKSPACE_KEY;
   const subscriberId = 'kn.vashishtha22@gmail.com'; // Use the actual subscriber id
   const distinctId = 'kn.vashishtha22@gmail.com'; // Use the actual distinct id
 
